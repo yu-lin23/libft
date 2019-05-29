@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:48:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/23 16:11:16 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/28 12:57:57 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/05/29 09:16:21 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+void	ft_putendl(char const *s)
 {
-	int len;
 	int i;
 
-	len = 0;
 	i = 0;
-	while (s1[len])
-		len++;
-	while (s2[i])
+	while (s[i] != '\0')
 	{
-		s1[len + i] = s2[i];
+		write(1, &s[i], 1);
 		i++;
 	}
-	s1[len + i] = '\0';
-	return (s1);
+	write(1, "\n", 1);
 }

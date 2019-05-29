@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:48:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/23 16:11:16 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/20 08:32:10 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/05/29 10:08:51 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strcat(char *s1, const char *s2)
+int		main(int ac, char* av[])
 {
-	int len;
-	int i;
-
-	len = 0;
-	i = 0;
-	while (s1[len])
-		len++;
-	while (s2[i])
+	if (ac == 1)
 	{
-		s1[len + i] = s2[i];
-		i++;
+		int i;
+		
+		i = 0;
+		while (av[i])
+		{
+			ft_putchar(ft_toupper(*av[i]));
+			i++;
+		}
 	}
-	s1[len + i] = '\0';
-	return (s1);
+	else
+		printf("Try again");
+	return (0);
 }

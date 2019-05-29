@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:48:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/23 16:11:16 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/21 14:18:42 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/05/27 07:26:45 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+void	ft_bzero(void *s, size_t n)
 {
-	int len;
+	char *ptr;
 	int i;
 
-	len = 0;
+	ptr = s;
 	i = 0;
-	while (s1[len])
-		len++;
-	while (s2[i])
+	while (i < n)
 	{
-		s1[len + i] = s2[i];
+		ptr[i] = 0;
 		i++;
 	}
-	s1[len + i] = '\0';
-	return (s1);
 }

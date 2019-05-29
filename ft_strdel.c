@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:48:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/23 16:11:16 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/29 09:39:27 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/05/29 09:48:37 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+void	ft_strdel(char **as)
 {
-	int len;
-	int i;
-
-	len = 0;
-	i = 0;
-	while (s1[len])
-		len++;
-	while (s2[i])
+	if (as != NULL)
 	{
-		s1[len + i] = s2[i];
-		i++;
+		free(*as);
+		*as = NULL;
 	}
-	s1[len + i] = '\0';
-	return (s1);
 }

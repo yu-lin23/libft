@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 10:48:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/23 16:11:16 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/24 10:50:56 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/05/28 12:44:28 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char *ft_itoa(int n)
 {
-	int len;
-	int i;
+	char	*str;
+	int		i;
+	int		len;
+	int		nb;
 
-	len = 0;
-	i = 0;
-	while (s1[len])
-		len++;
-	while (s2[i])
+	if ((str = (char*)malloc(sizeof(char) * len)) == NULL)
+		return (NULL);
+
+	if (n == 0)
 	{
-		s1[len + i] = s2[i];
-		i++;
+		str[0] = '0';
+		return (str);
 	}
-	s1[len + i] = '\0';
-	return (s1);
+	if (n < 0)
+	{
+		str[0] = '-';
+		nb *= -1;
+		len++;
+	}
+	while (n > 0)
+	{
+		str[i] = 48 + (n % 10);
+		nb /= 10;
+		i--;
+	}
+	return (str);
 }
