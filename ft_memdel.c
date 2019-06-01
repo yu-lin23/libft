@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:34:33 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/31 14:16:46 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/31 14:49:52 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/05/31 14:53:10 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, char *src, size_t len)
+void	ft_memdel(void **ap)
 {
-	int i;
-
-	i = 0;
-	while (src[i] && i < len)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	free(*ap);
+	*ap = NULL;
 }

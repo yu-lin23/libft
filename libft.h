@@ -1,12 +1,11 @@
-#ifndef _LIBFT_H_
-#define _LIBFT_H_
-
+#ifndef LIBFT_H
+# define LIBFT_H
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
 
-//Part 1
+/*Part 1*/
 int		ft_strlen(char *str);
 char	*ft_strcpy(char *dst, char *src);
 char	*ft_strncpy(char *dest, char *src, size_t n);
@@ -32,7 +31,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 void	*ft_memmove(void *dst, const void *src, size_t len);
 
-//Part 2
+/*Part 2*/
 int		ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_putnbr(int n);
@@ -41,5 +40,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif
