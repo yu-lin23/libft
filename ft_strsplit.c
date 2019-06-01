@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 09:23:52 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/01 15:37:16 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/06/01 14:26:05 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/06/01 14:34:53 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char **	ft_strsplit(char const *s, char c)
 {
-	char *str;
+	int i;
+	int count;
 
-	if (!str = (char*)malloc(sizeof(char*) * size))
-		return (NULL);
-	ft_memset(str, '\0', size + 1);
-	return (str);
+	i = 0
+	while (s != '\0')
+	{
+		count = 0;
+		if (s[i] == c)
+			count++;
+	}
+	return
 }

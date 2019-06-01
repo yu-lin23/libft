@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:50:29 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/21 14:16:50 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/01 15:34:13 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	char *ptr;
 	int i;
 
-	ptr = b;
+	ptr = (char *)b;
 	i = 0;
 	while (i < len)
 	{

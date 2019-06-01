@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:46:50 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/20 09:24:21 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/01 13:39:10 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(char *src)
 	while (src[len])
 		len++;
 	temp = (char*)malloc(sizeof(*temp) * (len + 1));
+	if (temp == NULL)
+		return (NULL);
 	while (i < len)
 	{
 		temp[i] = src[i];

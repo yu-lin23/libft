@@ -6,7 +6,7 @@
 #include <string.h>
 
 /*Part 1*/
-int		ft_strlen(char *str);
+int		ft_strlen(const char *str);
 char	*ft_strcpy(char *dst, char *src);
 char	*ft_strncpy(char *dest, char *src, size_t n);
 char	*ft_strdup(char *src);

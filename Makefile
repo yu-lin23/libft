@@ -17,13 +17,14 @@ SRC = ft_strlen.c \
 	  ft_strstr.c \
 	  ft_strchr.c \
 	  ft_strrchr.c \
+	  ft_strnew.c \
 	  ft_putchar.c \
 	  ft_putstr.c \
 	  ft_putnbr.c \
 	  ft_putendl.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
-	  ft_strnew.c \
+	  ft_strmap.c \
 	  ft_strdel.c
 
 FLAGS = -Wall -Werror -Wextra
