@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:24:27 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/01 11:23:33 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/03 15:58:08 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
+	unsigned long i;
 	int j;
 
 	i = 0;

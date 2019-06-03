@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:20:29 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/01 15:27:45 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/03 16:04:51 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*	ft_memalloc(size_t size)
 {
-	void *mem;
-	int i;
+	char *mem;
+	unsigned long i;
 
 	i = 0;
 	mem = malloc(size);

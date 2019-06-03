@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:34:33 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/31 14:16:46 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/03 15:54:04 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncpy(char *dst, char *src, size_t len)
 {
-	int i;
+	unsigned long i;
 
 	i = 0;
 	while (src[i] && i < len)
