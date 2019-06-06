@@ -40,10 +40,13 @@ void	ft_putnbr(int n);
 void	ft_putendl(char const *s);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strtrm(const char *s);
+char	**ft_strsplit(char const *s, char c);
 
 #endif

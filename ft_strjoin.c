@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:59:35 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/04 16:45:34 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/06 11:14:20 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,14 @@ char	*	ft_strjoin(char const *s1, char const *s2)
 	int i;
 	int j;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	new = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
-	i = 0
+	if (!new)
+		return (NULL);
+	i = 0;
 	while (i <= len1)
 	{
 		new[i] = s1[i];
