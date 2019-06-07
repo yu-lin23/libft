@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:29:33 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/06 12:31:18 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/07 15:24:54 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned const char *s;
 
 	i = 0;
+	if (!dst && !src)
+		return (NULL);
 	d = (unsigned char *)dst;
 	s = (unsigned const char *)src;
 	if (s == d)
 		return (dst);
-	if (s < d)
+	if (d <= s)
 	{
 		while (i < len)
 		{
@@ -35,7 +37,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len > 0)
 		{
-			d[len] = s[len];
+			d[len - 1] = s[len - 1];
 			len--;
 		}
 	}

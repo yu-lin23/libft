@@ -46,7 +46,6 @@ SRC = ft_strlen.c \
 	  ft_strnequ.c \
 	  ft_strsub.c \
 	  ft_strjoin.c \
-	  ft_strtrim.c \
 	  ft_strdel.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c
