@@ -16,7 +16,8 @@ char	*ft_strtrim(const char *s)
 {
 	unsigned char *new;
 	unsigned long len;
-	unsigned long i;
+	unsigned long start;
+	int i;
 
 	if (!s)
 		return (NULL);
@@ -25,9 +26,14 @@ char	*ft_strtrim(const char *s)
 	if (!new)
 		return (NULL);
 	i = 0;
-	while (s[i] != '\0' && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
-		i++;
+	while (s[start] != '\0' && (s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
+		start++;
 	while (i < len && (s[len] == ' ' || s[len] == '\n' ||s[len] == '\t'))
 		len--;
-	return (ft_strsub(new, i, len - i + 1));
+	while (i < (len - start))
+	{
+		new[i] = s[start + i];
+		i++;
+	}
+	return (new);
 }
