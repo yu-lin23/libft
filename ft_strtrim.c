@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 16:59:37 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/06 15:22:53 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/10 15:27:04 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,19 @@
 
 char	*ft_strtrim(const char *s)
 {
-	unsigned char *new;
-	unsigned long len;
+	char *new;
+	unsigned long end;;
 	unsigned long start;
-	int i;
 
 	if (!s)
 		return (NULL);
-	len = ft_strlen(s);
-	new = (unsigned char *)malloc(sizeof(char) * len + 1);
-	if (!new)
-		return (NULL);
-	i = 0;
+	end = ft_strlen(s);
+	start = 0;
 	while (s[start] != '\0' && (s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
 		start++;
-	while (i < len && (s[len] == ' ' || s[len] == '\n' ||s[len] == '\t'))
-		len--;
-	while (i < (len - start))
-	{
-		new[i] = s[start + i];
-		i++;
-	}
-	return (new);
+	while (start < end && (s[end - 1] == ' ' || s[end - 1] == '\n' ||s[end - 1] == '\t'))
+		end--;
+	new = (char *)malloc(sizeof(char) * (end + 1));
+	new = ft_strsub(s, start, (end - start));
+	return ((char *)new);
 }
