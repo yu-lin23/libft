@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   countwords.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 14:20:29 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/09 00:37:57 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/06/10 15:50:59 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/06/10 15:55:27 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memalloc(size_t size)
+int countwords(char const *str, char c)
 {
-	char *mem;
-	unsigned long i;
-
-	i = 0;
-	mem = malloc(size);
-	if (mem == NULL)
-		return (NULL);
-	while (i < size)
-	{
-		mem[i] = '\0';
-		i++;
-	}
-	return (mem);
+	ft_strtrim(str);
+	printf("%s", str);
+	return (0);
 }
