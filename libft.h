@@ -5,6 +5,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct	s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
 /*Part 1*/
 int		ft_strlen(const char *str);
 char	*ft_strcpy(char *dst, char *src);
@@ -59,5 +66,11 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strtrim(const char *s);
 char	**ft_strsplit(char const *s, char c);
+char	*ft_itoa(int n);
 
+//Other
+int		ft_countwords(char const *str, char c);
+
+//Bonus
+t_list	*ft_lsnew(void const *content, size_t content_size);
 #endif

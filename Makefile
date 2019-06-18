@@ -34,6 +34,7 @@ SRC = ft_strlen.c \
 	  ft_putendl.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
+	  ft_itoa.c \
 	  ft_memalloc.c \
 	  ft_memdel.c \
 	  ft_strnew.c \
@@ -48,6 +49,8 @@ SRC = ft_strlen.c \
 	  ft_strjoin.c \
 	  ft_strdel.c \
 	  ft_strtrim.c \
+	  ft_strsplit.c \
+	  ft_countwords.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c
 
@@ -61,6 +64,9 @@ $(NAME):
 	gcc $(FLAGS) -c $(SRC) -I.
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+norm:
+	norminette -R CheckForbiddenSourceHeader $(SRC)
 clean:
 	rm -f $(OBJ)
 
