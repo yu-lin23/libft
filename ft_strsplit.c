@@ -6,92 +6,49 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 14:26:05 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/13 10:13:59 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/18 14:11:01 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-/*char	**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char **multipleWords;
 	int i;
-	int nb;
-	char *newstr;
-
-	newstr = writewords(s, c);
-	i = 0;
-
-	while (s[i] && j < words)
-	{
-
-	}
-}*/
-
-int countwords(char const *str, char c)
-{
-	int i;
-	int j;
-	int numberOfWords;
+	int count;
+	int start;
 
 	i = 0;
-	j = 0;
-	numberOfWords = 0;
-	while (str[i] != '\0')
+	count = 0;
+	multipleWords = (char**)ft_memalloc(sizeof(ft_countwords + 1));
+	if (!(multipleWords || !(s)))
+		return (NULL);
+	while (s[count] != '\0')
 	{
-		if (str[0] == c)
-		{
-			i++;
-			continue;
-		}
-		j++;
-		if (str[j] == '\0')
-		{
-			numberOfWords++;
+		while (s[count] == c && s[count] != '\0')
+			count++;
+		start = count;
+		if (s[count] == '\0')
 			break;
-		}
-		else if (str[i] == c && str[j] != c )
-			numberOfWords++;
+		while (s[count] != c && s[i] != '\0')
+			count++;
+		multipleWords[i] = ft_strsub(s, start, (count - start));
 		i++;
 	}
-	printf("Number of words is %d", numberOfWords);
-	return (0);
+	multipleWords[i] = NULL;
+	return (multipleWords);
 }
 
-/*char *writewords(char *str, char c)
+int		main(void)
 {
-	char *newWord;
-	int i;
-	int j;
-	while (str[i] != '\0')
-	{
-		if (str[i] == c)
-		{
-			newWord[j] = str[i];
-			i++;
-			j++;
-			while (str[i] == c)
-				i++;
-		}
-		else
-		{
-			newWord[j] = string[i];
-			i++;
-			j++;
-		}
-	}
-	if (str[i - 1] != c)
-	{
-		newWord[j] = c;
-		j++;
-	}
-	newWord[j] = '\0';
-	return (newWord)
-}*/
+	char **array = ft_strsplit("hello", '*');
 
-int main()
-{
-	countwords("*hello*fellow***students*", '*');
-	return (0);
+	int i = 0;
+	while (array[i] != NULL)
+	{
+		printf("%s\n", array[i]);
+		i++;
+	}
 }
