@@ -70,6 +70,7 @@ char	*ft_itoa(int n);
 
 //Other
 int		ft_countwords(char const *str, char c);
+int		ft_wordlen(char const *s, char c);
 
 //Bonus
 t_list	*ft_lsnew(void const *content, size_t content_size);

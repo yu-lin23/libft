@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/06/18 17:24:58 by yu-lin            #+#    #+#              #
+#    Updated: 2019/06/18 17:25:18 by yu-lin           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRC = ft_strlen.c \
@@ -52,7 +64,8 @@ SRC = ft_strlen.c \
 	  ft_strsplit.c \
 	  ft_countwords.c \
 	  ft_putendl_fd.c \
-	  ft_putnbr_fd.c
+	  ft_putnbr_fd.c \
+	  ft_wordlen.c
 
 FLAGS = -Wall -Werror -Wextra
 
