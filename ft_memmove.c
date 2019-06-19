@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:29:33 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/07 15:24:54 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/18 10:58:43 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned long i;
-	unsigned char *d;
-	unsigned const char *s;
+	unsigned long		i;
+	unsigned char		*d;
+	unsigned const char	*s;
 
 	i = 0;
 	if (!dst && !src)
