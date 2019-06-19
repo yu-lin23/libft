@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:50:56 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/14 10:44:02 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/19 17:05:28 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int ft_length(long n)
 {
 
 	size_t i;
-	
+
 	i = 0;
 	if (n < 0)
 	{
@@ -36,6 +36,8 @@ char *ft_itoa(int n)
 	char	*str;
 	size_t len;
 
+	if (n == -2147483648)
+		return ("-2147483648");
 	len = ft_length(n);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);

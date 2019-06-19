@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 15:58:32 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/06 08:59:25 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/19 17:27:01 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 		return (0);
 	while (i < n)
 	{
-		if (s1 == s2)
-			return (1);
+		if (s1 != s2)
+			return (0);
 		i++;
 	}
-	return (0);
+	return (1);
 }
