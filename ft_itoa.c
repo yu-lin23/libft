@@ -6,16 +6,15 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 10:50:56 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/19 17:05:28 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/20 15:06:07 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_length(long n)
+static int	ft_length(long n)
 {
-
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n < 0)
@@ -31,10 +30,10 @@ static int ft_length(long n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
-	size_t len;
+	size_t	len;
 
 	if (n == -2147483648)
 		return ("-2147483648");
@@ -54,9 +53,8 @@ char *ft_itoa(int n)
 	}
 	while (n > 0)
 	{
-		str[len] = 48 + (n % 10);
+		str[len--] = 48 + (n % 10);
 		n /= 10;
-		len--;
 	}
 	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 16:59:37 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/12 07:15:40 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/20 16:04:37 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 
 char	*ft_strtrim(const char *s)
 {
-	char *new;
-	unsigned long end;
-	unsigned long start;
+	char			*new;
+	unsigned long	end;
+	unsigned long	start;
 
 	if (!s)
 		return (NULL);
 	end = ft_strlen(s);
 	start = 0;
-	while (s[start] != '\0' && (s[start] == ' ' || s[start] == '\n' || s[start] == '\t'))
+	while (s[start] != '\0' && (s[start] == ' ' || s[start] == '\n'
+				|| s[start] == '\t'))
 		start++;
-	while (start < end && (s[end - 1] == ' ' || s[end - 1] == '\n' ||s[end - 1] == '\t'))
+	while (start < end && (s[end - 1] == ' ' || s[end - 1] == '\n'
+				|| s[end - 1] == '\t'))
 		end--;
 	new = (char *)malloc(sizeof(char) * (end + 1));
 	new = ft_strsub(s, start, (end - start));

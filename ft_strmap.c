@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 14:46:25 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/09 00:40:50 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/20 15:07:04 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int i;
-	char *str;
+	int		i;
+	char	*str;
 
 	if ((!s) || (!(str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1))))
 		return (NULL);

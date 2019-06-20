@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 13:50:29 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/03 16:13:47 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/20 14:07:17 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	char *ptr;
-	unsigned long i;
+	char			*ptr;
+	unsigned long	i;
 
 	ptr = (char *)b;
 	i = 0;
