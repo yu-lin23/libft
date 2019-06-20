@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)
@@ -22,8 +21,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	count = 0;
-	if (!(s) || !(arr = (char**)ft_memalloc(sizeof(char *) *
-		(ft_countwords(s, c) + 1))))
+	if (!(s) || !(arr = (char**)ft_memalloc(sizeof(ft_countwords(s, c) + 1))))
 		return (NULL);
 	nb = 0;
 	while (i < ft_countwords(s, c))
@@ -31,26 +29,28 @@ char	**ft_strsplit(char const *s, char c)
 		count += nb;
 		while (s[count] == c)
 			count++;
-		nb = ft_wordlen(s + count, c);;
+		nb = ft_wordlen(s + count, c);
+		if (!(arr[i] = ft_strnew(nb + 1)))
+			arr[i] = NULL;
 		if (i == 0)
-			arr[i] = ft_strsub(s, count, nb);
-		else
-			arr[i] = ft_strsub(s, count, nb);
+			arr[i] = ft_strsub(s, count + 1, nb);
+		arr[i] = ft_strsub(s, count, nb);
 		i++;
 	}
-	arr[i] = NULL;
+	arr[i] = 0;
 	return (arr);
 }
 
 int	main(void)
 {
-	char **array = ft_strsplit("hello world, my name is Alyson V Britannia§", ' ');
-	printf("array[0] is %s\n", array[0]);
+	char **array = ft_strsplit("hello world, my name is Sherry; god of th euniverse", ' ');
 	int i = 0;
 	while (array[i])
 	{
 		printf("array : %s\n", array[i]);
 		i++;
 	}
+
+
 	return (0);
 }

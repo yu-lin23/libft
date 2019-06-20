@@ -21,9 +21,17 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 		return (0);
 	while (i < n)
 	{
-		if (s1 != s2)
+		if (s1[i] != s2[i])
 			return (0);
 		i++;
 	}
 	return (1);
+}
+
+int		main(void)
+{
+
+
+	printf("number is %d\n", ft_strnequ("Hello", "Heelo", 4));
+	return 0;
 }
