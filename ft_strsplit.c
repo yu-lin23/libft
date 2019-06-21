@@ -6,11 +6,10 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 14:26:05 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/20 16:42:23 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/21 09:57:13 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)
@@ -23,7 +22,7 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	count = 0;
 	if (!(s) || !(arr = (char**)ft_memalloc(sizeof(char *) *
-		(ft_countwords(s, c) + 1))))
+					(ft_countwords(s, c) + 1))))
 		return (NULL);
 	nb = 0;
 	while (i < ft_countwords(s, c))
@@ -31,7 +30,7 @@ char	**ft_strsplit(char const *s, char c)
 		count += nb;
 		while (s[count] == c)
 			count++;
-		nb = ft_wordlen(s + count, c);;
+		nb = ft_wordlen(s + count, c);
 		if (i == 0)
 			arr[i] = ft_strsub(s, count, nb);
 		else
@@ -40,17 +39,4 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	arr[i] = NULL;
 	return (arr);
-}
-
-int	main(void)
-{
-	char **array = ft_strsplit("hello world, my name is Alyson V Britannia§", ' ');
-	printf("array[0] is %s\n", array[0]);
-	int i = 0;
-	while (array[i])
-	{
-		printf("array : %s\n", array[i]);
-		i++;
-	}
-	return (0);
 }

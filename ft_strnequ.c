@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 15:58:32 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/19 17:27:01 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/21 10:01:01 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,4 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 		i++;
 	}
 	return (1);
-}
-
-int		main(void)
-{
-
-
-	printf("number is %d\n", ft_strnequ("Hello", "Heelo", 4));
-	return 0;
 }
