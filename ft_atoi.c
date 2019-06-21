@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:11:30 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/14 09:58:15 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/21 15:22:38 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,28 @@
 
 int		ft_atoi(const char *str)
 {
-	int i;
 	int nbr;
 	int check;
 
-	i = 0;
 	nbr = 0;
 	check = 1;
-	while ((str[i] == '\n') || (str[i] == '\t') || (str[i] == '\v')
-			|| (str[i] == ' ') || (str[i] == '\f') || (str[i] == '\r'))
-		i++;
+	if (ft_strlen(str) > 20 && ft_strcmp(str, "9223372036854775807") >= 0)
+		return (-1);
+	else if (ft_strlen(str) > 21 && ft_strcmp(str, "-9223372036854775808") >= 0)
+		return (0);
+	while ((*str == '\n') || (*str == '\t') || (*str == '\v')
+			|| (*str == ' ') || (*str == '\f') || (*str == '\r'))
+		str++;
 	if (str == 0)
 		return (0);
-	if (str[i] == '-')
+	if (*str == '-')
 		check = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && (str[i] >= '0') && (str[i] <= '9'))
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str && (*str >= '0') && (*str <= '9'))
 	{
-		nbr = nbr * 10 + (str[i] - 48);
-		i++;
+		nbr = nbr * 10 + (*str - 48);
+		str++;
 	}
 	return (nbr * check);
 }
