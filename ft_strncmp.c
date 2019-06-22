@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:29:42 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/20 14:07:46 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 02:49:03 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned long i;
+	size_t i;
 
 	i = 0;
 	if (n == 0)

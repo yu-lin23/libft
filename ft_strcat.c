@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:48:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/05/23 16:11:16 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 02:28:08 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strcat(char *s1, const char *s2)
 	int len;
 	int i;
 
+	if (!s1 && !s2)
+		return (NULL);
 	len = 0;
 	i = 0;
 	while (s1[len])

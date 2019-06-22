@@ -6,11 +6,11 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 15:23:09 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/17 16:55:42 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/21 23:47:24 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
@@ -27,7 +27,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		new->content = ft_memalloc(content_size);
 		if (!(new->content))
+		{
+			free(new);
 			return (NULL);
+		}
 		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}

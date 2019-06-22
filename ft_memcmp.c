@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 12:10:06 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/18 10:20:14 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 01:50:57 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*str1;
 	unsigned char	*str2;
-	unsigned long	i;
+	size_t			i;
 
 	if (s1 == s2 || n == 0)
 		return (0);

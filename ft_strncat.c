@@ -6,16 +6,16 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:44:32 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/03 14:25:31 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 02:41:09 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, char *src, int n)
+char	*ft_strncat(char *dest, char *src, size_t n)
 {
-	int i;
-	int len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = 0;

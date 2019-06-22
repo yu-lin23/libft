@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 14:56:29 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/06 14:31:35 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 01:01:03 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned long i;
+	unsigned int i;
 
 	if (s && f)
 	{

@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:29:33 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/20 14:40:35 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 00:21:54 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	s = (unsigned const char *)src;
 	if (s == d)
 		return (dst);
-	if (d <= s)
+	if (d < s)
 		d = ft_memcpy(d, s, len);
 	else
 	{

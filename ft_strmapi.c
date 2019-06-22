@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 14:38:44 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/20 15:07:19 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 01:05:51 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	char	*str;
+	unsigned int		i;
+	char				*str;
 
 	if (!s || !f || (!(str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1))))
 		return (NULL);

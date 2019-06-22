@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 14:18:42 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/14 10:03:40 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/21 23:57:27 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char			*ptr;
-	unsigned long	i;
+	char	*ptr;
+	size_t	i;
 
-	ptr = s;
+	ptr = (char *)s;
 	i = 0;
 	while (i < n)
 	{

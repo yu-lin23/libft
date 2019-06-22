@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 14:26:05 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/21 09:57:13 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/22 01:23:04 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,7 @@ char	**ft_strsplit(char const *s, char c)
 		while (s[count] == c)
 			count++;
 		nb = ft_wordlen(s + count, c);
-		if (i == 0)
-			arr[i] = ft_strsub(s, count, nb);
-		else
-			arr[i] = ft_strsub(s, count, nb);
+		arr[i] = ft_strsub(s, count, nb);
 		i++;
 	}
 	arr[i] = NULL;
