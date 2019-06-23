@@ -1,35 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 09:08:53 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/06 12:59:10 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/05/29 14:50:16 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/06/22 00:56:53 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+void	function(char *string)
 {
-	int i;
-	int j;
-
-	i = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[i] != '\0')
-	{
-		j = 0;
-		while (needle[j] == haystack[i + j] && needle[j] != '\0')
-		{
-			j++;
-			if (needle[j] == '\0')
-				return ((char *)haystack + i);
-		}
-		i++;
-	}
-	return (NULL);
+	printf("%s\n", string);
 }
+
+void	ft_striter(char *s, void (*f)(char *))
+{
+	unsigned long i;
+
+	if (s && f)
+	{
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(&s[i]);
+			i++;
+		}
+	}
+}
+
+int	main(void)
+{
+	void	(*funct1)(char *);
+
+	funct1 = &function;
+	ft_striter("Hello world", funct1);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
