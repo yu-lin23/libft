@@ -6,24 +6,25 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:11:30 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/22 02:50:57 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/24 14:37:31 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-static int	min_max_and_string_checker(const char *str)
+static int		min_max_and_str_checker(const char *str)
 {
 	if (ft_isalpha(str[0]))
 		return (0);
-	if (ft_strlen(str) > 20 &&  ft_strcmp(str, "9223372036854775807") == 0)
+	if (ft_strlen(str) > 20 && ft_strcmp(str, "9223372036854775807") == 0)
 		return (-1);
-	else if (ft_strlen(str) > 21 && ft_strcmp(str, "-9223372036854775808") == 0)
+	else if (ft_strlen(str) > 21
+			&& ft_strcmp(str, "-9223372036854775808") == 0)
 		return (0);
 	return (1);
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int nbr;
 	int check;
@@ -31,7 +32,7 @@ int		ft_atoi(const char *str)
 
 	nbr = 0;
 	check = 1;
-	if ((error = min_max_and_string_checker(str)) != 1)
+	if ((error = min_max_and_str_checker(str)) != 1)
 		return (error);
 	while ((*str == '\n') || (*str == '\t') || (*str == '\v')
 			|| (*str == ' ') || (*str == '\f') || (*str == '\r'))
@@ -51,9 +52,3 @@ int		ft_atoi(const char *str)
 	}
 	return (nbr);
 }
-
-
-
-
-
-

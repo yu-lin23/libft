@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main_striter.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:38:44 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/24 09:40:28 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/06/24 14:54:24 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/06/24 15:04:57 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	function(char *str)
 {
-	unsigned int		i;
-	char				*str;
+	printf("%s\n", str);
+}
 
-	if (!s || !f || (!(str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1))))
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+int		main(void)
+{
+	void (*func1)(char *);
+
+	func1 = &function;
+	ft_striter("HelloWorld", func1);
+	return (0);
 }

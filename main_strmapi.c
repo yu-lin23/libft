@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   main_strmapi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:38:44 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/24 09:40:28 by yu-lin           ###   ########.fr       */
+/*   Created: 2019/06/24 09:33:57 by yu-lin            #+#    #+#             */
+/*   Updated: 2019/06/24 15:33:02 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char		function_is_a_thing(unsigned int integer, char character)
 {
-	unsigned int		i;
-	char				*str;
+	printf("Unsigned int is %d and the char is %c\n", integer,character);
+	return (0);
+}
 
-	if (!s || !f || (!(str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1))))
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+int		main(void)
+{
+	char (*func1)(unsigned int, char);
+	char *str = strdup("Hello World");
+
+	func1 = &function_is_a_thing;
+	str = ft_strmapi(str, func1);
+	printf("%s", str);
+	return (0);
 }
