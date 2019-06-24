@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/24 11:44:41 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/24 11:55:10 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/24 16:52:20 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,16 @@ void	error_and_exit(char *str)
 
 void	testing(char *mine, char *theirs)
 {
-	if(strcmp(mine, theirs) != 0)
+	if (strcmp(mine, theirs) != 0)
 	{
 		printf("Difference:\nMine = %s\nTheirs = %s\n", mine, theirs);
 		error_and_exit("Failed\n");
+	}
+	else
+	{
+		printf("Mine:	%s\n", mine);
+		printf("Theirs:	%s\n", theirs);
+		printf("Passed\n\n");
 	}
 }
 
@@ -37,6 +43,19 @@ int		main(void)
 	ft_strcpy(mine, "Hello");
 	strcpy(theirs, "Hello");
 	testing(mine, theirs);
-	ft_strcpy(mine, "World\n");
-	strcpy(mine, "Worlds\n");
+	ft_strcpy(mine, "World");
+	strcpy(theirs, "World");
+	testing(mine, theirs);
+	/*Uncomment for segfault testing
+	ft_strcpy(mine, NULL);
+	strcpy(theirs, NULL);
+	testing(mine, theirs);
+	char my_overflow[10];
+	char their_overflow[10];
+	ft_strcpy(my_overflow, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+	strcpy(their_overflow, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");*/
+	ft_strcpy(mine, "");
+	strcpy(theirs, "");
+	testing(mine, theirs);
+	return (0);
 }
