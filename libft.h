@@ -74,4 +74,5 @@ int		ft_wordlen(char const *s, char c);
 
 //Bonus
 t_list	*ft_lstnew(void const *content, size_t content_size);
+void	*ft_lstadd(t_list **alst, t_list *new);
 #endif

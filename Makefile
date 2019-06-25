@@ -6,7 +6,7 @@
 #    By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/18 17:24:58 by yu-lin            #+#    #+#              #
-#    Updated: 2019/06/21 23:49:05 by yu-lin           ###   ########.fr        #
+#    Updated: 2019/06/25 09:32:29 by yu-lin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,9 @@ SRC = ft_strlen.c \
 	  ft_countwords.c \
 	  ft_putendl_fd.c \
 	  ft_putnbr_fd.c \
-	  ft_wordlen.c
+	  ft_wordlen.c \
+	  ft_lstnew.c \
+	  ft_lstadd.c
 
 FLAGS = -Wall -Werror -Wextra
 
