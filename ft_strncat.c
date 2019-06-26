@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:44:32 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/22 02:41:09 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/26 07:43:29 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strncat(char *dest, char *src, size_t n)
 	size_t	len;
 
 	i = 0;
-	len = 0;
-	while (dest[len])
-		len++;
+	len = ft_strlen(dest);
 	while (src[i] && i < n)
 	{
 		dest[len] = src[i];

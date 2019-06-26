@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:17:31 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/06 13:37:54 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/26 13:55:02 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_putstr(char *str)
 {
-	int index;
+	int i;
 
-	index = 0;
+	i = 0;
 	if (str != NULL)
-		while (str[index] != '\0')
+		while (str[i] != '\0')
 		{
-			ft_putchar(str[index]);
-			index++;
+			ft_putchar(str[i]);
+			i++;
 		}
 }

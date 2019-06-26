@@ -12,7 +12,6 @@ typedef struct	s_list
 	struct s_list	*next;
 }					t_list;
 
-/*Part 1*/
 int		ft_strlen(const char *str);
 char	*ft_strcpy(char *dst, char *src);
 char	*ft_strncpy(char *dest, char *src, size_t n);
@@ -42,8 +41,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-/*Part 2*/
-int		ft_putchar(char c);
+void	ft_putchar(char c);
 void	ft_putstr(char *str);
 void	ft_putnbr(int n);
 void	ft_putendl(char const *s);
@@ -68,11 +66,9 @@ char	*ft_strtrim(const char *s);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 
-//Other
 int		ft_countwords(char const *str, char c);
 int		ft_wordlen(char const *s, char c);
 
-//Bonus
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void	*ft_lstadd(t_list **alst, t_list *new);
 #endif
