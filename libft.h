@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/27 10:51:59 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/29 13:13:14 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/06/30 10:12:12 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 void				ft_putchar(char c);
-void				ft_putstr(char *str);
+void				ft_putstr(char const *s);
 void				ft_putnbr(int n);
 void				ft_putendl(char const *s);
 void				ft_putchar_fd(char c, int fd);
@@ -65,7 +65,7 @@ void				ft_memdel(void **ap);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
-int					ft_strnequ(char const*s1, char const *s2, size_t n);
+int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strnew(size_t size);
