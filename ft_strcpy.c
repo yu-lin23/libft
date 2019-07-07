@@ -6,11 +6,11 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:31:54 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/22 02:15:58 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/07/02 16:03:56 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dst, char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 

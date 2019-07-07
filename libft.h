@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/27 10:51:59 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/30 10:12:12 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/07/07 09:55:58 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ typedef struct		s_list
 }					t_list;
 
 size_t				ft_strlen(const char *s);
-char				*ft_strcpy(char *dst, char *src);
+char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
-char				*ft_strdup(char *s1);
+char				*ft_strdup(const char *s1);
 char				*ft_strcat(char *s1, const char *s2);
-char				*ft_strncat(char *s1, char *s2, size_t n);
+char				*ft_strncat(char *s1, const char *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
