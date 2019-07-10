@@ -6,24 +6,25 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:11:30 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/22 02:50:57 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/07/10 09:54:46 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
-static int	min_max_and_string_checker(const char *str)
+static int		min_max_and_string_checker(const char *str)
 {
 	if (ft_isalpha(str[0]))
 		return (0);
-	if (ft_strlen(str) > 20 &&  ft_strcmp(str, "9223372036854775807") == 0)
+	if (ft_strlen(str) > 20 && ft_strcmp(str, "9223372036854775807") == 0)
 		return (-1);
-	else if (ft_strlen(str) > 21 && ft_strcmp(str, "-9223372036854775808") == 0)
+	else if (ft_strlen(str) > 21
+			&& ft_strcmp(str, "-9223372036854775808") == 0)
 		return (0);
 	return (1);
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int nbr;
 	int check;
@@ -44,16 +45,10 @@ int		ft_atoi(const char *str)
 		str++;
 	while (*str && (*str >= '0') && (*str <= '9') && ft_isdigit(*str))
 	{
-		nbr = nbr * 10 + (*str - 48) * check;
+		nbr = (nbr * 10) + (*str - 48) * check;
 		if (nbr == -2147483647)
 			return (0);
 		str++;
 	}
 	return (nbr);
 }
-
-
-
-
-
-

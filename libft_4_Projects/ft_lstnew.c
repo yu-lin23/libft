@@ -6,7 +6,7 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 15:23:09 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/21 23:47:24 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/07/10 09:53:12 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		new->content = NULL;
 		new->content_size = 0;
 	}
-	else 
+	else
 	{
 		new->content = ft_memalloc(content_size);
 		if (!(new->content))

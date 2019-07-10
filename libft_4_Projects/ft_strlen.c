@@ -6,18 +6,18 @@
 /*   By: yu-lin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:18:20 by yu-lin            #+#    #+#             */
-/*   Updated: 2019/06/13 13:39:20 by yu-lin           ###   ########.fr       */
+/*   Updated: 2019/07/10 08:48:22 by yu-lin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(const char *str)
+size_t		ft_strlen(const char *s)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 		i++;
 	return (i);
 }
